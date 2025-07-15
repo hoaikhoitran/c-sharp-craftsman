@@ -45,15 +45,19 @@
             txtAddress = new TextBox();
             grpStudent = new GroupBox();
             btnAddNew = new Button();
+            btnSearch = new Button();
+            dgvResult = new DataGridView();
+            txtKeyword = new TextBox();
             ((System.ComponentModel.ISupportInitialize)picAvatar).BeginInit();
             pnlImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStudentList).BeginInit();
             grpStudent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvResult).BeginInit();
             SuspendLayout();
             // 
             // btnSayHello
             // 
-            btnSayHello.Location = new Point(48, 52);
+            btnSayHello.Location = new Point(48, 18);
             btnSayHello.Name = "btnSayHello";
             btnSayHello.Size = new Size(142, 41);
             btnSayHello.TabIndex = 0;
@@ -66,7 +70,7 @@
             // btnExit
             // 
             btnExit.BackColor = SystemColors.InactiveCaption;
-            btnExit.Location = new Point(228, 52);
+            btnExit.Location = new Point(228, 18);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(142, 41);
             btnExit.TabIndex = 1;
@@ -81,7 +85,7 @@
             // 
             // btnImage
             // 
-            btnImage.Location = new Point(48, 116);
+            btnImage.Location = new Point(48, 77);
             btnImage.Name = "btnImage";
             btnImage.Size = new Size(142, 41);
             btnImage.TabIndex = 2;
@@ -103,7 +107,7 @@
             // lblFileName
             // 
             lblFileName.AutoSize = true;
-            lblFileName.Location = new Point(196, 137);
+            lblFileName.Location = new Point(196, 98);
             lblFileName.Name = "lblFileName";
             lblFileName.Size = new Size(58, 20);
             lblFileName.TabIndex = 4;
@@ -114,27 +118,27 @@
             // 
             pnlImage.AutoScroll = true;
             pnlImage.Controls.Add(picAvatar);
-            pnlImage.Location = new Point(32, 185);
+            pnlImage.Location = new Point(32, 223);
             pnlImage.Name = "pnlImage";
-            pnlImage.Size = new Size(471, 355);
+            pnlImage.Size = new Size(338, 220);
             pnlImage.TabIndex = 5;
             // 
             // dgvStudentList
             // 
             dgvStudentList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStudentList.Location = new Point(538, 223);
+            dgvStudentList.Location = new Point(390, 223);
             dgvStudentList.Name = "dgvStudentList";
             dgvStudentList.RowHeadersWidth = 51;
-            dgvStudentList.Size = new Size(464, 317);
+            dgvStudentList.Size = new Size(420, 326);
             dgvStudentList.TabIndex = 6;
             dgvStudentList.CellContentClick += dgvStudentList_CellContentClick;
             dgvStudentList.SelectionChanged += ShowAStudent;
             // 
             // btnLoadData
             // 
-            btnLoadData.Location = new Point(538, 164);
+            btnLoadData.Location = new Point(517, 18);
             btnLoadData.Name = "btnLoadData";
-            btnLoadData.Size = new Size(131, 42);
+            btnLoadData.Size = new Size(107, 30);
             btnLoadData.TabIndex = 7;
             btnLoadData.Text = "Load Data";
             btnLoadData.UseVisualStyleBackColor = true;
@@ -152,7 +156,7 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(26, 78);
+            lblName.Location = new Point(26, 74);
             lblName.Name = "lblName";
             lblName.Size = new Size(52, 20);
             lblName.TabIndex = 9;
@@ -198,22 +202,49 @@
             grpStudent.Controls.Add(lblName);
             grpStudent.Controls.Add(lblID);
             grpStudent.FlatStyle = FlatStyle.System;
-            grpStudent.Location = new Point(684, 52);
+            grpStudent.Location = new Point(390, 54);
             grpStudent.Name = "grpStudent";
-            grpStudent.Size = new Size(380, 154);
+            grpStudent.Size = new Size(361, 163);
             grpStudent.TabIndex = 14;
             grpStudent.TabStop = false;
             grpStudent.Text = "  Student Information  ";
+            grpStudent.Enter += grpStudent_Enter;
             // 
             // btnAddNew
             // 
-            btnAddNew.Location = new Point(538, 51);
+            btnAddNew.Location = new Point(393, 18);
             btnAddNew.Name = "btnAddNew";
-            btnAddNew.Size = new Size(131, 42);
+            btnAddNew.Size = new Size(107, 30);
             btnAddNew.TabIndex = 15;
             btnAddNew.Text = "Add New";
             btnAddNew.UseVisualStyleBackColor = true;
             btnAddNew.Click += AddNewStudent;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(828, 176);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(107, 30);
+            btnSearch.TabIndex = 16;
+            btnSearch.Text = "Search Student";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += SearchStudent;
+            // 
+            // dgvResult
+            // 
+            dgvResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvResult.Location = new Point(828, 223);
+            dgvResult.Name = "dgvResult";
+            dgvResult.RowHeadersWidth = 51;
+            dgvResult.Size = new Size(356, 168);
+            dgvResult.TabIndex = 17;
+            // 
+            // txtKeyword
+            // 
+            txtKeyword.Location = new Point(941, 179);
+            txtKeyword.Name = "txtKeyword";
+            txtKeyword.Size = new Size(195, 27);
+            txtKeyword.TabIndex = 14;
             // 
             // StudentListForm
             // 
@@ -221,7 +252,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.Info;
-            ClientSize = new Size(1123, 602);
+            ClientSize = new Size(1196, 630);
+            Controls.Add(txtKeyword);
+            Controls.Add(dgvResult);
+            Controls.Add(btnSearch);
             Controls.Add(btnAddNew);
             Controls.Add(grpStudent);
             Controls.Add(btnLoadData);
@@ -240,6 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvStudentList).EndInit();
             grpStudent.ResumeLayout(false);
             grpStudent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvResult).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -263,5 +298,8 @@
         private TextBox txtAddress;
         private GroupBox grpStudent;
         private Button btnAddNew;
+        private Button btnSearch;
+        private DataGridView dgvResult;
+        private TextBox txtKeyword;
     }
 }

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\SE1849_PRN\\session02_language\\Khoi.FAP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27693A6B-3E63-41AE-8AC7-36809BDD93E0}|Khoi.FAP.StudentMgt\\Khoi.FAP.StudentMgt.csproj|d:\\se1849_prn\\session02_language\\khoi.fap\\khoi.fap.studentmgt\\studentlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27693A6B-3E63-41AE-8AC7-36809BDD93E0}|Khoi.FAP.StudentMgt\\Khoi.FAP.StudentMgt.csproj|solutionrelative:khoi.fap.studentmgt\\studentlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27693A6B-3E63-41AE-8AC7-36809BDD93E0}|Khoi.FAP.StudentMgt\\Khoi.FAP.StudentMgt.csproj|D:\\SE1849_PRN\\session02_language\\Khoi.FAP\\khoi.fap.studentmgt\\studentlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{27693A6B-3E63-41AE-8AC7-36809BDD93E0}|Khoi.FAP.StudentMgt\\Khoi.FAP.StudentMgt.csproj|solutionrelative:khoi.fap.studentmgt\\studentlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27693A6B-3E63-41AE-8AC7-36809BDD93E0}|Khoi.FAP.StudentMgt\\Khoi.FAP.StudentMgt.csproj|d:\\se1849_prn\\session02_language\\khoi.fap\\khoi.fap.studentmgt\\studentlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27693A6B-3E63-41AE-8AC7-36809BDD93E0}|Khoi.FAP.StudentMgt\\Khoi.FAP.StudentMgt.csproj|solutionrelative:khoi.fap.studentmgt\\studentlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27693A6B-3E63-41AE-8AC7-36809BDD93E0}|Khoi.FAP.StudentMgt\\Khoi.FAP.StudentMgt.csproj|d:\\se1849_prn\\session02_language\\khoi.fap\\khoi.fap.studentmgt\\studentlistform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "Khoi.FAP.StudentMgt\\StudentListForm.Designer.cs",
               "ToolTip": "D:\\SE1849_PRN\\session02_language\\Khoi.FAP\\Khoi.FAP.StudentMgt\\StudentListForm.Designer.cs",
               "RelativeToolTip": "Khoi.FAP.StudentMgt\\StudentListForm.Designer.cs",
-              "ViewState": "AgIAAPgAAAAAAAAAAADwvx4AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvxYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-14T19:43:44.679Z",
               "EditorCaption": ""
@@ -83,20 +83,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "StudentListForm.cs",
               "DocumentMoniker": "D:\\SE1849_PRN\\session02_language\\Khoi.FAP\\Khoi.FAP.StudentMgt\\StudentListForm.cs",
               "RelativeDocumentMoniker": "Khoi.FAP.StudentMgt\\StudentListForm.cs",
               "ToolTip": "D:\\SE1849_PRN\\session02_language\\Khoi.FAP\\Khoi.FAP.StudentMgt\\StudentListForm.cs",
               "RelativeToolTip": "Khoi.FAP.StudentMgt\\StudentListForm.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAG4AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowIEAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-14T19:21:16.475Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "StudentListForm.cs [Design]",
               "DocumentMoniker": "D:\\SE1849_PRN\\session02_language\\Khoi.FAP\\Khoi.FAP.StudentMgt\\StudentListForm.cs",
               "RelativeDocumentMoniker": "Khoi.FAP.StudentMgt\\StudentListForm.cs",

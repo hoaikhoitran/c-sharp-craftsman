@@ -110,5 +110,31 @@
             dgvStudentList.DataSource = null; // clear cái grid trước mới gán lại đc
             dgvStudentList.DataSource = _ds;
         }
+
+        private void grpStudent_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchStudent(object sender, EventArgs e)
+        {
+            //var result = _ds.Where(xxx => xxx.Name == txtKeyword.Text).ToList();
+
+            var result = _ds.Where(xxx => xxx.Name.ToLower().Contains(txtKeyword.Text.ToLower()) ||
+            xxx.Address.ToLower().Contains(txtKeyword.Text.ToLower())).ToList();
+
+            //trả về 1 list trong RAM
+            dgvResult.DataSource = null;
+            dgvResult.DataSource = result;
+        }
+        //private void SearchStudent(object sender, EventArgs e)
+        //{
+        //    var result = _ds.Where(CheckNameStudent).ToList();
+        //    //trả về 1 list trong RAM
+        //    dgvResult.DataSource = null;
+        //    dgvResult.DataSource = result;
+        //}
+
+        private bool CheckNameStudent(Student xxx) => xxx.Name == "Phuoc Tran";
     }
 }

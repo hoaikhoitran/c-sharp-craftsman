@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Khoi.FAP.StudentMgt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a16c04c8fd7b50711a16578dd2c564695b39ec2a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a51749caa86ea5632d97cc854b96afb3e7e38b4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Khoi.FAP.StudentMgt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Khoi.FAP.StudentMgt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
