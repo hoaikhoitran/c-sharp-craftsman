@@ -2,6 +2,7 @@
 {
     public partial class StudentListForm : Form
     {
+        List<Student> _ds = new List<Student>();
         public StudentListForm()
         {
             InitializeComponent();
@@ -51,12 +52,12 @@
 
         private void LoadData(object sender, EventArgs e)
         {
-            List<Student> ds = new List<Student>();
-            ds.Add(new Student() { Id = "SE1", Name = "Phuoc Tran", Address = "Tay Ninh" });
-            ds.Add(new Student() { Id = "SE2", Name = "Huy Tran", Address = "Ha Noi" });
-            ds.Add(new Student() { Id = "SE3", Name = "Phuoc Tran", Address = "LA" });
 
-            dgvStudentList.DataSource = ds;
+            _ds.Add(new Student() { Id = "SE1", Name = "Phuoc Tran", Address = "Tay Ninh" });
+            _ds.Add(new Student() { Id = "SE2", Name = "Huy Tran", Address = "Ha Noi" });
+            _ds.Add(new Student() { Id = "SE3", Name = "Phuoc Tran", Address = "LA" });
+
+            dgvStudentList.DataSource = _ds;
         }
 
         private void StudentListForm_Load(object sender, EventArgs e)
@@ -88,7 +89,7 @@
             //             dgv.Click += chừa chỗ cái hàm của ai đó
             //             dgv.Click thì làm gì, thì gọi hàm này
             //             xài các chấm khác để biết dòng nào được chọn, lấy từng cell
-            if(dgvStudentList.SelectedRows.Count > 0)
+            if (dgvStudentList.SelectedRows.Count > 0)
             {
                 //lấy ra dòng đầu tiên trong nhiều dòng vừa chọn, trích từng cell ra, 3 cells
                 DataGridViewRow selectedRow = dgvStudentList.SelectedRows[0];
@@ -96,6 +97,18 @@
                 txtName.Text = selectedRow.Cells[1].Value.ToString();
                 txtAddress.Text = selectedRow.Cells[2].Value.ToString();
             }
+        }
+
+        private void AddNewStudent(object sender, EventArgs e)
+        {
+            Student newStudent = new Student();
+            newStudent.Id = txtId.Text;
+            newStudent.Name = txtName.Text;
+            newStudent.Address = txtAddress.Text;
+            _ds.Add(newStudent);
+            //refresh grid
+            dgvStudentList.DataSource = null; // clear cái grid trước mới gán lại đc
+            dgvStudentList.DataSource = _ds;
         }
     }
 }

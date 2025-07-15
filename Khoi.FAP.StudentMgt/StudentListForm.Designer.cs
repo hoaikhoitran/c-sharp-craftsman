@@ -44,6 +44,7 @@
             txtName = new TextBox();
             txtAddress = new TextBox();
             grpStudent = new GroupBox();
+            btnAddNew = new Button();
             ((System.ComponentModel.ISupportInitialize)picAvatar).BeginInit();
             pnlImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStudentList).BeginInit();
@@ -121,7 +122,7 @@
             // dgvStudentList
             // 
             dgvStudentList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStudentList.Location = new Point(600, 223);
+            dgvStudentList.Location = new Point(538, 223);
             dgvStudentList.Name = "dgvStudentList";
             dgvStudentList.RowHeadersWidth = 51;
             dgvStudentList.Size = new Size(464, 317);
@@ -131,7 +132,7 @@
             // 
             // btnLoadData
             // 
-            btnLoadData.Location = new Point(534, 63);
+            btnLoadData.Location = new Point(538, 164);
             btnLoadData.Name = "btnLoadData";
             btnLoadData.Size = new Size(131, 42);
             btnLoadData.TabIndex = 7;
@@ -204,6 +205,16 @@
             grpStudent.TabStop = false;
             grpStudent.Text = "  Student Information  ";
             // 
+            // btnAddNew
+            // 
+            btnAddNew.Location = new Point(538, 51);
+            btnAddNew.Name = "btnAddNew";
+            btnAddNew.Size = new Size(131, 42);
+            btnAddNew.TabIndex = 15;
+            btnAddNew.Text = "Add New";
+            btnAddNew.UseVisualStyleBackColor = true;
+            btnAddNew.Click += AddNewStudent;
+            // 
             // StudentListForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -211,6 +222,7 @@
             AutoSize = true;
             BackColor = SystemColors.Info;
             ClientSize = new Size(1123, 602);
+            Controls.Add(btnAddNew);
             Controls.Add(grpStudent);
             Controls.Add(btnLoadData);
             Controls.Add(dgvStudentList);
@@ -250,5 +262,6 @@
         private TextBox txtName;
         private TextBox txtAddress;
         private GroupBox grpStudent;
+        private Button btnAddNew;
     }
 }
